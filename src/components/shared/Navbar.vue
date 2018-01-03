@@ -38,7 +38,7 @@ export default {
         },
         {
           title: 'SOS',
-          link: '/sos'
+          link: '/order'
         }
       ]
     }

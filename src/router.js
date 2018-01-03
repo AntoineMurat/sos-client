@@ -15,7 +15,7 @@ export default {
   routes: {
     '/': 'Home',
     '/team': 'Team',
-    '/sos': 'Sos',
+    '/order': 'Sos',
     '/admin': 'Admin'
   },
   notFound: 'NotFound'
