@@ -3,16 +3,46 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-    <title>Site of the Lord</title>
+    <title>The Lord of The Site</title>
 
     <script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer>
 </script>
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="static/css/index.css" type="text/css" rel="stylesheet"/>
+    <link href="static/css/responsive.css" type="text/css" rel="stylesheet"/>
+    <link rel="icon" type="image/png" href="static/images/logo_lord.png" />
   </head>
   <body>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <footer class="page-footer fixed-down pink darken-4">
+      <div class="container" id="next_event">
+        <h2>Prochain évènement</h2>
+        <ul id="countdown">
+          <li>          
+            <span class="days time-font">09</span>
+            <p>jours</p>
+          </li>
+          <li>
+            <span class="hours time-font">18</span>
+            <p class="">heures</p>
+          </li>
+          <li>
+            <span class="minutes time-font">29</span>
+            <p class="">minutes</p>
+          </li>
+          <li>
+            <span class="seconds time-font">20</span>
+            <p class="">secondes</p>
+          </li>       
+        </ul>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="static/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="static/js/countdown-timer.js"></script>
+    <script type="text/javascript" src="static/js/main.js"></script>  
   </body>
 </html>
