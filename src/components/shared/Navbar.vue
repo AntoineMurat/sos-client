@@ -1,9 +1,9 @@
 <template>
   <nav class="light-blue lighten-1" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="/" class="brand-logo">
+      <router-link :to="'/'" id="logo-container" href="/" class="brand-logo">
         <slot></slot>
-      </a>
+      </router-link>
       <ul class="right hide-on-med-and-down">
         <NavLink v-for="navlink in navlinks" :key="navlink.link" :title="navlink.title" :link="navlink.link"/>
       </ul>
@@ -38,7 +38,7 @@ export default {
         },
         {
           title: 'SOS',
-          link: '/order'
+          link: '/sos'
         }
       ]
     }

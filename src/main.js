@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import fr from 'vee-validate/dist/locale/fr'
 import VeeValidate, { Validator } from 'vee-validate'
+import router from './router'
 
 // Install the Plugin.
 Vue.use(VeeValidate)
@@ -16,6 +17,7 @@ Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  router,
   template: '<App/>',
   components: { App }
 })

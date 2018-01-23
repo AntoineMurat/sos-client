@@ -6,7 +6,7 @@
         <i class="material-icons prefix">account_circle</i>
 
         <input id="firstname" name="firstname" data-vv-as="Votre prénom" v-model="firstname"
-          type="text" v-validate="'required|alpha'" data-vv-delay="500"
+          type="text" v-validate="'required|alpha_spaces'" data-vv-delay="500"
           :class="{'input': true, 'invalid': errors.has('firstname') }">
 
         <label for="firstname">Prénom</label>
@@ -16,7 +16,7 @@
       <div class="input-field col s6 l4 control">
 
         <input id="lastname" name="lastname" data-vv-as="Votre nom" v-model="lastname"
-          type="text" v-validate="'required|alpha'" data-vv-delay="500"
+          type="text" v-validate="'required|alpha_spaces'" data-vv-delay="500"
           :class="{'input': true, 'invalid': errors.has('lastname') }">
 
         <label for="lastname">Nom</label>
