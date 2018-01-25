@@ -16,3 +16,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+li#enFaitNon {
+  font-family: 'aniron';
+}
+</style>

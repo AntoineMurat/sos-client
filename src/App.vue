@@ -1,9 +1,12 @@
 <template>
   <div id="app">
-    <Header title="Site of the Lord"/>
-    <Container>
-      <router-view/>
-    </Container>
+    <Header title="La Lord"/>
+    <main>
+      <Container>
+        <router-view/>
+      </Container>
+    </main>
+    <Footer/>
   </div>
 </template>
 
@@ -25,5 +28,12 @@ export default {
 <style>
 #app {
   overflow: hidden;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
 }
 </style>

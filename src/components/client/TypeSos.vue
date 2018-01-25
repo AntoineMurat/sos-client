@@ -1,6 +1,6 @@
 <template>
-  <div class="col s12 m4 l3">
-    <div class="card small" @click.prevent="select">
+  <div class="col s12 m6 l4">
+    <div class="card medium hoverable" @click.prevent="select">
       <div class="card-image waves-effect waves-block waves-light">
         <img :src="imageFile">
       </div>

@@ -1,5 +1,5 @@
 <template>
-  <nav class="light-blue lighten-1" role="navigation">
+  <nav class="pink accent-4" role="navigation">
     <div class="nav-wrapper container">
       <router-link :to="'/'" id="logo-container" href="/" class="brand-logo">
         <slot></slot>
@@ -27,11 +27,15 @@ export default {
     NavLink
   },
   mounted () {
-    $('.button-collapse').sideNav()
+    $('.button-collapse').sideNav({closeOnClick: true})
   },
   data () {
     return {
       navlinks: [
+        {
+          title: 'La Lord',
+          link: '/'
+        },
         {
           title: 'Team',
           link: '/team'
@@ -45,3 +49,15 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+@font-face {
+  font-family: 'ringbearer';
+  src: url('/static/fonts/ringbearer.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+.brand-logo {
+  font-family: 'ringbearer';
+}
+</style>
