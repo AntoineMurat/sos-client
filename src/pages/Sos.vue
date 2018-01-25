@@ -2,12 +2,14 @@
   <div id="sos-vue">
     <div class="row">
       <transition name="fade">
-        <SelectionSos v-if="!sosSelectionne" key="SelectionSos" @selectionner="selectionnerSos"/>
-        <OptionsSos v-else-if="!optionsSelectionnes" key="OptionsSos" @selectionner="selectionnerOptions" @retour="annulerSelectionSos"
-          :typeSos="typeSos"/>
-        <ValidationSos v-else-if="!sosValide" key="ValidationSos" @valider="validerSos" @retour="annulerSelectionOptions"
-          :typeSos="typeSos" :optionsSos="optionsSos"/>
-        <FinSos v-else key="FinSos" :typeSos="typeSos" :optionsSos="optionsSos" :coordonnees="coordonnees"/>
+        <keep-alive>
+          <SelectionSos v-if="!sosSelectionne" key="SelectionSos" @selectionner="selectionnerSos"/>
+          <OptionsSos v-else-if="!optionsSelectionnes" key="OptionsSos" @selectionner="selectionnerOptions" @retour="annulerSelectionSos"
+            :typeSos="typeSos"/>
+          <ValidationSos v-else-if="!sosValide" key="ValidationSos" @valider="validerSos" @retour="annulerSelectionOptions"
+            :typeSos="typeSos" :optionsSos="optionsSos"/>
+          <FinSos v-else key="FinSos" :typeSos="typeSos" :optionsSos="optionsSos" :coordonnees="coordonnees"/>
+        </keep-alive>
       </transition>
     </div>
   </div>

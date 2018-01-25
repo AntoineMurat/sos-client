@@ -8,7 +8,6 @@ import router from './router'
 
 // Install the Plugin.
 Vue.use(VeeValidate)
-
 // Localize takes the locale object as the second argument (optional) and merges it.
 Validator.localize('fr', fr)
 
