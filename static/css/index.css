@@ -1,11 +1,23 @@
 .fixed-down {
 	position: fixed;
 	bottom: 0px;
-    margin-bottom: 0px;	
+    margin-bottom: 0px;
     left: 0px;
     right: 0px;
 }
 
+.no-margin-bottom {
+	margin-bottom: 0px;
+}
+
+p.time-title {
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+/* div.card {
+	opacity: 0;
+	/* TODO: Améliorer pour pas fuck up les SOS */
+} */
 /*--------------\
 | Countdown CSS |
 \---------------*/
@@ -50,7 +62,7 @@
 }
 
 #countdown li .hours {
-  background-color: #efc94c; 
+  background-color: #efc94c;
   border-top: 1px solid #f2d470;
   border-left: 1px solid #f2d470;
 }
@@ -87,3 +99,26 @@
   width: 1px;
 }
 
+#navbar_logo {
+  max-height: 150%;
+  width: auto;
+}
+
+.transparent-1 {
+  opacity: 0.9;
+}
+.transparent-2 {
+  opacity: 0.8;
+}
+
+.transparent-3 {
+  opacity: 0.6;
+}
+
+.transparent-4 {
+  opacity: 0.4;
+}
+
+.transparent-5 {
+  opacity: 0.2;
+}

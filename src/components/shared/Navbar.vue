@@ -1,5 +1,5 @@
 <template>
-  <nav class="pink accent-4" role="navigation">
+  <nav class="pink darken-4 transparent-2" role="navigation">
     <div class="nav-wrapper container">
       <router-link :to="'/'" id="logo-container" href="/" class="brand-logo">
         <slot></slot>

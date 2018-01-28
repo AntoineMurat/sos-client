@@ -1,25 +1,31 @@
 <template>
-  <footer class="pink darken-4">
+  <footer class="pink darken-4 transparent-2">
     <div class="container" id="next_event">
-      <h4>Prochain évènement</h4>
-      <ul>
-        <li>
-          <span class="days time-font">{{ days }}</span>
-          <p>jours</p>
-        </li>
-        <li>
-          <span class="hours time-font">{{ hours }}</span>
-          <p class="">h</p>
-        </li>
-        <li>
-          <span class="minutes time-font">{{ minutes }}</span>
-          <p class="">min</p>
-        </li>
-        <li>
-          <span class="seconds time-font">{{ seconds }}</span>
-          <p class="">sec</p>
-        </li>
-      </ul>
+      <div class="row no-margin-bottom">
+      <div class="col l4 s12">
+        <h4>Prochain évènement: </h4>
+      </div>
+      <div class="col l8 s12">
+        <ul class="no-margin-bottom">
+          <li>
+            <span class="days time-font">{{ days }}</span>
+            <p class="time-title">jours</p>
+          </li>
+          <li>
+            <span class="hours time-font">{{ hours }}</span>
+            <p class="time-title">h</p>
+          </li>
+          <li>
+            <span class="minutes time-font">{{ minutes }}</span>
+            <p class="time-title">min</p>
+          </li>
+          <li>
+            <span class="seconds time-font">{{ seconds }}</span>
+            <p class="time-title">sec</p>
+          </li>
+        </ul>
+        </div>
+      </div>
     </div>
   </footer>
 </template>
