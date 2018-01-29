@@ -102,6 +102,26 @@ const typesSos = [{
       code: 'CAVERNE'
     }]
   }]
+}, {
+  title: `L'expertise C de l'AST`,
+  type: 'ast',
+  description: `La campagne c'est un truc de guedin mais le C c'est la galère ? Nos AST les plus dévoués sont là pour résoudre vos bugs. `,
+  parameters: [{
+    name: `J'ai besoin`,
+    code: 'BESOIN',
+    multi: false,
+    required: true,
+    values: [{
+      name: `d'aide pour un algo`,
+      code: 'ALGO'
+    }, {
+      name: `qu'on m'explique le C`,
+      code: 'C'
+    }, {
+      name: `de comprendre les pointeurs`,
+      code: 'POINTEURS'
+    }]
+  }]
 }]
 
-export default typesSos
+module.exports = typesSos

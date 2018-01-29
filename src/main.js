@@ -6,6 +6,12 @@ import fr from 'vee-validate/dist/locale/fr'
 import VeeValidate, { Validator } from 'vee-validate'
 import router from './router'
 
+const timemachine = require('timemachine')
+timemachine.config({
+  dateString: 'February 5, 2018 17:59:45',
+  tick: true
+})
+
 // Install the Plugin.
 Vue.use(VeeValidate)
 // Localize takes the locale object as the second argument (optional) and merges it.

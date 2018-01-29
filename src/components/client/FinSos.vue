@@ -38,7 +38,7 @@ export default {
   components: {RecapSos},
   computed: {
     imageFile () {
-      return require('@/assets/img/notfound.png')
+      return require('@/assets/img/gandalf.png')
     }
   }
 }

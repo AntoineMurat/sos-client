@@ -1,7 +1,7 @@
 <template>
-  <footer class="pink darken-4">
+  <footer>
     <div class="container" id="next_event">
-      <h4>Prochain évènement</h4>
+      <h4>{{ this.currentEvent.textBefore }}</h4>
       <ul>
         <li>
           <span class="days time-font">{{ days }}</span>
@@ -25,23 +25,31 @@
 </template>
 
 <script>
+const currentEvent = require('@/assets/js/events').currentEvent
+
 export default {
   name: 'Footer',
   data () {
     return {
-      eventDate: new Date(2018, 0, 31, 19, 30, 0),
+      currentEvent: {
+        code: 'Chargement de l\'appli',
+        textBefore: 'App chargée dans',
+        date: new Date(new Date().getTime() + 5000)
+      },
       days: '',
       minutes: '',
       hours: '',
       seconds: ''
     }
   },
-  mounted () {
-    const pad = (n) => (n < 10) ? ('0' + Math.floor(n)) : Math.floor(n)
+  methods: {
+    updateCounter () {
+      const pad = (n) => (n < 10) ? ('0' + Math.floor(n)) : Math.floor(n)
 
-    setInterval(_ => {
       const now = new Date()
-      const delta = this.eventDate - now
+      this.currentEvent = currentEvent()
+
+      const delta = this.currentEvent.date - now
       const seconds = delta / 1000
       const minutes = seconds / 60
       const hours = minutes / 60
@@ -50,7 +58,11 @@ export default {
       this.minutes = pad(minutes % 60)
       this.hours = pad(hours % 24)
       this.days = Math.floor(days)
-    }, 1000)
+    }
+  },
+  mounted () {
+    this.updateCounter()
+    setInterval(_ => this.updateCounter(), 1000)
   }
 }
 </script>
@@ -59,6 +71,7 @@ export default {
 
 footer {
   text-align: center;
+  background-color: #660117;
 }
 
 h4, .li,p {

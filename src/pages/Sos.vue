@@ -1,6 +1,6 @@
 <template>
   <div id="sos-vue">
-    <div class="row">
+    <div class="row" v-if="sosDispo || dev">
       <transition name="fade">
         <keep-alive>
           <SelectionSos v-if="!sosSelectionne" key="SelectionSos" @selectionner="selectionnerSos"/>
@@ -12,6 +12,15 @@
         </keep-alive>
       </transition>
     </div>
+    <div v-else class="center">
+      <img :src="require('@/assets/img/gandalf.png')"><br>
+      <div v-if="sosCommences">
+        Les SOS seront bientot disponibles !
+      </div>
+      <div v-else>
+        Le service SOS est interrompu pendant les événements de campagne !
+      </div>
+    </div>
   </div>
 </template>
 
@@ -20,6 +29,7 @@ import SelectionSos from '@/components/client/SelectionSos'
 import OptionsSos from '@/components/client/OptionsSos'
 import ValidationSos from '@/components/client/ValidationSos'
 import FinSos from '@/components/client/FinSos'
+const sosAvailable = require('@/assets/js/events').sosAvailable
 
 export default {
   name: 'Sos',
@@ -36,7 +46,10 @@ export default {
       optionsSelectionnes: false,
       optionsSos: null,
       sosValide: false,
-      coordonnees: null
+      coordonnees: null,
+      dev: false,
+      sosDispo: sosAvailable(),
+      sosCommences: new Date() < new Date(2018, 1, 3, 23, 59, 0)
     }
   },
   methods: {
@@ -57,7 +70,14 @@ export default {
     validerSos (coordonnees) {
       this.sosValide = true
       this.coordonnees = coordonnees
+    },
+    updateDispo () {
+      this.sosDispo = sosAvailable()
+      this.sosCommences = new Date() < new Date(2018, 1, 3, 23, 59, 0)
     }
+  },
+  mounted () {
+    setInterval(_ => this.updateDispo(), 1000)
   }
 }
 </script>
@@ -76,5 +96,9 @@ export default {
 .fade-leave-to {
   transform: translateX(-2000px);
   position: absolute;
+}
+
+img {
+  max-width: 100%;
 }
 </style>

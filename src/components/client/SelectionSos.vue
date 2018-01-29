@@ -8,7 +8,8 @@
 
 <script>
 import TypeSos from './TypeSos'
-import typesSos from '@/TypesSos'
+const typesSos = require('@/assets/js/TypesSos')
+
 export default {
   name: 'SelectionSos',
   components: {

@@ -39,7 +39,6 @@
           <i class="material-icons prefix">map</i>
           <select id="city" name="city" label="city">
             <option selected value="Grenoble">Grenoble</option>
-            <option value="Meylan">Meylan</option>
             <option value="St Martin d'Hères">St Martin d'Hères</option>
           </select>
           <label for="city">Ville</label>
@@ -138,6 +137,10 @@ export default {
         axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${coordinates.lat()},${coordinates.lng()}`).then(res => {
           if (this.random !== tick) return
           this.address = res.data.results[0].formatted_address.split(',')[0]
+          if (res.data.results[0].formatted_address.split(',')[1] === ' 38100 Grenoble') this.city = 'Grenoble'
+          if (res.data.results[0].formatted_address.split(',')[1] === ' 38400 Saint-Martin-d\'Hères') this.city = 'St Martin d\'Hères'
+          $('select').val(this.city)
+          $('select').material_select()
         })
       }, 50)
     }

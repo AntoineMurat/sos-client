@@ -13,14 +13,21 @@
         <p>{{ coordonnees.firstname }} {{ coordonnees.lastname }}</p>
       </div>
       <div class="card-action">
-        <a v-if="coordonnees.phone" @click.prevent="appeler">Appeler</a>
-        <a v-if="supprimable" @click.prevent="supprimer">Supprimer</a>
+        <a v-if="supprimable" @click.prevent="supprimer">Mettre fin</a>
       </div>
       <div class="card-reveal">
         <span class="card-title grey-text text-darken-4">{{ title }}<i class="material-icons right" @click="showContactPic">close</i></span>
         <p>
           {{ coordonnees.firstname }} {{ coordonnees.lastname }}<br>
-          {{ details }}
+          <span class="card-title grey-text text-darken-4">Détails</span>
+          <b>ENSIMAG</b> : {{ coordonnees.ensimag ? 'Oui' : 'Peut-être' }}<br>
+          <b>Téléphone</b> : {{ coordonnees.phone }}<br>
+          <b>Adresse</b> : {{ coordonnees.address }}<br>
+          <b>Ville</b> : {{ coordonnees.city }}<br>
+          <b>Options</b><br>
+          <span v-for="(valeur, nom) in options">
+            <b>{{ nom }}</b> : {{ valeur }}<br>
+          </span>
         </p>
       </div>
     </div>
@@ -74,9 +81,6 @@ export default {
     },
     title () {
       return 'SOS ' + this.type
-    },
-    details () {
-      return { coordonnees: this.coordonnees, options: this.options }
     }
   },
   methods: {
@@ -88,13 +92,10 @@ export default {
     },
     supprimer () {
       this.$emit('supprimer')
-      axios.get(`/sos/supprimer/${this.id}`)
+      axios.get(`/admin/sos/supprimer/${this.id}`)
       .then(res => {
         if (res.data.error) console.log(res.data.error)
       })
-    },
-    appeler () {
-      alert('Appel du ' + this.coordonnees.phone + ' non implémenté.')
     }
   }
 }
