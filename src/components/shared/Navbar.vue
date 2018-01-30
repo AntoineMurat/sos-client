@@ -1,5 +1,5 @@
 <template>
-  <nav class="pink darken-4 transparent-2" role="navigation">
+  <nav class="bordeaux transparent-2" role="navigation">
     <div class="nav-wrapper container">
       <router-link :to="'/'" id="logo-container" href="/" class="brand-logo">
         <slot></slot>
@@ -33,8 +33,12 @@ export default {
     return {
       navlinks: [
         {
-          title: 'La Lord',
+          title: 'Accueil',
           link: '/'
+        },
+        {
+          title: 'Événements',
+          link: '/event'
         },
         {
           title: 'Team',

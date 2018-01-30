@@ -1,6 +1,6 @@
-/* lg */ 
+/* lg */
 @media (min-width: 1200px) {
-  
+
 }
 
 /* md */
@@ -35,7 +35,7 @@
     width: 60px;
   }
 
-  #countdown li:before, 
+  #countdown li:before,
   #countdown li:after {
     top:25px;
   }
@@ -57,7 +57,7 @@
     width: 45px;
   }
 
-  #countdown li:before, 
+  #countdown li:before,
   #countdown li:after {
     top: 18px
   }

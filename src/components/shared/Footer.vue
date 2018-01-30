@@ -1,8 +1,8 @@
 <template>
-  <footer class="pink darken-4 transparent-2">
+  <footer class="bordeaux transparent-2">
     <div class="container" id="next_event">
       <div class="row no-margin-bottom">
-      <div class="col l4 s12">
+      <div class="col l4 s12 valign-wrapper" style="height: 100%;">
         <h4>Prochain évènement: </h4>
       </div>
       <div class="col l8 s12">

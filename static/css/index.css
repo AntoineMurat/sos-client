@@ -14,10 +14,13 @@ p.time-title {
 	margin-bottom: 5px;
 	margin-top: 5px;
 }
-/* div.card {
-	opacity: 0;
-	/* TODO: Améliorer pour pas fuck up les SOS */
-} */
+.bordeaux {
+	background-color: #6D071A;
+}
+
+.clickable {
+	cursor: pointer !important;
+}
 /*--------------\
 | Countdown CSS |
 \---------------*/
