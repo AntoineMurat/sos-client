@@ -1,25 +1,31 @@
 <template>
   <footer>
-    <div class="container" id="next_event">
-      <h4>{{ this.currentEvent.textBefore }}</h4>
-      <ul>
-        <li>
-          <span class="days time-font">{{ days }}</span>
-          <p>jours</p>
-        </li>
-        <li>
-          <span class="hours time-font">{{ hours }}</span>
-          <p class="">h</p>
-        </li>
-        <li>
-          <span class="minutes time-font">{{ minutes }}</span>
-          <p class="">min</p>
-        </li>
-        <li>
-          <span class="seconds time-font">{{ seconds }}</span>
-          <p class="">sec</p>
-        </li>
-      </ul>
+    <div class="container">
+      <div class="row no-margin-bottom">
+      <div class="col l4 s12 valign-wrapper">
+        <h4>{{ this.currentEvent.textBefore }}</h4>
+      </div>
+      <div class="col l8 s12">
+        <ul class="no-margin-bottom">
+          <li>
+            <span class="days time-font">{{ days }}</span>
+            <p class="time-title">jours</p>
+          </li>
+          <li>
+            <span class="hours time-font">{{ hours }}</span>
+            <p class="time-title">h</p>
+          </li>
+          <li>
+            <span class="minutes time-font">{{ minutes }}</span>
+            <p class="time-title">min</p>
+          </li>
+          <li>
+            <span class="seconds time-font">{{ seconds }}</span>
+            <p class="time-title">sec</p>
+          </li>
+        </ul>
+        </div>
+      </div>
     </div>
   </footer>
 </template>
@@ -68,72 +74,6 @@ export default {
 </script>
 
 <style scoped>
-
-footer {
-  text-align: center;
-  background-color: #660117;
-}
-
-h4, .li,p {
-  color: white;
-}
-
-ul {
-  display: block;
-  overflow: hidden;
-  text-align: center;
-  padding: 0
-}
-
-li {
-  list-style: none;
-  display:inline-block;
-  margin-right: 40px;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 18px;
-  position: relative;
-}
-
-li:last-child {
-  margin-right: 0
-}
-
-li span {
-  display: block;
-  font-size: 40px;
-  font-weight: 700;
-  height: 82px;
-  line-height: 79px;
-  width: 75px;
-  border-radius: 10px;
-  border-right: 1px solid #9e3e2e;
-  border-bottom: 1px solid #9e3e2e;
-}
-
-li .days {
-  background-color: #45b29d;
-  border-top: 1px solid #6ac1b1;
-  border-left: 1px solid #6ac1b1;
-}
-
-li .hours {
-  background-color: #efc94c;
-  border-top: 1px solid #f2d470;
-  border-left: 1px solid #f2d470;
-}
-
-li .minutes {
-  background-color: #e27a3f;
-  border-top: 1px solid #e89565;
-  border-left: 1px solid #e89565;
-}
-
-li .seconds {
-  background-color: #df5a49;
-  border-top: 1px solid #e57b6d;
-  border-left: 1px solid #e57b6d;
-}
 
 /* lg */
 @media (min-width: 1200px) {
@@ -199,5 +139,79 @@ li .seconds {
   li:after {
     top: 18px
   }
+}
+/*--------------\
+| Countdown CSS |
+\---------------*/
+
+footer {
+  display: block;
+  overflow: hidden;
+  text-align: center;
+  padding: 0;
+  background-color: #660117;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+.valign-wrapper {
+  display: block;
+  height: 100%;
+}
+
+h4, .li,p {
+  color: white;
+}
+
+li {
+  list-style: none;
+  display:inline-block;
+  margin-right: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  position: relative;
+}
+
+li:last-child {
+  margin-right: 0
+}
+
+li span {
+  display: block;
+  font-size: 40px;
+  font-weight: 700;
+  height: 82px;
+  line-height: 79px;
+  width: 75px;
+  border-radius: 10px;
+  border-right: 1px solid #9e3e2e;
+  border-bottom: 1px solid #9e3e2e;
+}
+
+li .days {
+  background-color: #45b29d;
+  border-top: 1px solid #6ac1b1;
+  border-left: 1px solid #6ac1b1;
+}
+
+li .hours {
+  background-color: #efc94c;
+  border-top: 1px solid #f2d470;
+  border-left: 1px solid #f2d470;
+}
+
+li .minutes {
+  background-color: #e27a3f;
+  border-top: 1px solid #e89565;
+  border-left: 1px solid #e89565;
+}
+
+li .seconds {
+  background-color: #df5a49;
+  border-top: 1px solid #e57b6d;
+  border-left: 1px solid #e57b6d;
 }
 </style>

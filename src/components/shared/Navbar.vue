@@ -33,8 +33,12 @@ export default {
     return {
       navlinks: [
         {
-          title: 'La Lord',
+          title: 'Accueil',
           link: '/'
+        },
+        {
+          title: 'Événements',
+          link: '/event'
         },
         {
           title: 'Team',

@@ -60,13 +60,13 @@ export default {
 	transform: translateY(-50%) translateX(-50%);
 	left:50%;
   animation-name: fadeInOut;
-  animation-duration: 10s;
+  animation-duration: 5s;
   /* animation-iteration-count: infinite;
   animation-direction: alternate; */
 }
 
 #anneau {
-  max-height: 64vh;
+  max-height: 65vh;
   max-width: 100%;
   position: absolute;
   top: 45%;
@@ -76,6 +76,6 @@ export default {
 }
 
 #anneauWrapper {
-  animation: fadeInOut 12s linear;
+  animation: fadeInOut 5s linear;
 }
 </style>
