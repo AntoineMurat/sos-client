@@ -1,9 +1,9 @@
 <template>
   <div id="home-vue">
-    <h1>Bonjour, votez pour nous SVP</h1>
-    Parallax <br>
-    Photo <br>
-    Parallax
+    <img id="oliphant" :src="require('@/assets/img/oliphant.png')"/>
+    <div id="anneauWrapper">
+      <img id="anneau" :src="require('@/assets/img/anneau.png')"/>
+    </div>
   </div>
 </template>
 
@@ -14,5 +14,68 @@ export default {
 </script>
 
 <style scoped>
+#home-vue {
 
+}
+
+@keyframes spin {
+    0% {
+        transform: translateY(-50%) translateX(-50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(-50%) translateX(-50%) rotate(360deg);
+    }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bright {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#oliphant {
+  max-height: 50vh;
+  max-width: 100%;
+	position:absolute;
+	top: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	left:50%;
+  animation-name: fadeInOut;
+  animation-duration: 10s;
+  /* animation-iteration-count: infinite;
+  animation-direction: alternate; */
+}
+
+#anneau {
+  max-height: 64vh;
+  max-width: 100%;
+  position: absolute;
+  top: 45%;
+	transform: translateY(-50%) translateX(-50%);
+	left:50%;
+  animation: spin 100s linear infinite;
+}
+
+#anneauWrapper {
+  animation: fadeInOut 12s linear;
+}
 </style>

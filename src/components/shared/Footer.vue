@@ -135,26 +135,6 @@ li .seconds {
   border-left: 1px solid #e57b6d;
 }
 
-li:before {
-  background-color: #FFFFFF;
-  content: "";
-  height: 11px;
-  left: 0;
-  position: absolute;
-  top: 36px;
-  width: 1px;
-}
-
-li:after {
-  background-color: #FFFFFF;
-  content: "";
-  height: 11px;
-  right:0;
-  position: absolute;
-  top: 36px;
-  width: 1px;
-}
-
 /* lg */
 @media (min-width: 1200px) {
 

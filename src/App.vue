@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header title="La Lord"/>
-    <main>
+    <main :class="{onHome: $route.path == '/'}">
       <Container>
         <router-view/>
       </Container>
@@ -31,6 +31,13 @@ export default {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+}
+
+.onHome {
+  background: url(http://chtigres.fr/wp-content/uploads/2017/02/13022017-DSC_4986.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
 main {

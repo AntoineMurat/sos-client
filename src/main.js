@@ -6,11 +6,11 @@ import fr from 'vee-validate/dist/locale/fr'
 import VeeValidate, { Validator } from 'vee-validate'
 import router from './router'
 
-const timemachine = require('timemachine')
+/* const timemachine = require('timemachine')
 timemachine.config({
-  dateString: 'February 5, 2018 17:59:45',
+  dateString: 'February 3, 2018 23:58:58',
   tick: true
-})
+}) */
 
 // Install the Plugin.
 Vue.use(VeeValidate)
