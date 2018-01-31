@@ -1,5 +1,5 @@
 <template>
-  <nav role="navigation">
+  <nav role="navigation" class="bordeaux">
     <div class="nav-wrapper container">
       <router-link :to="'/'" id="logo-container" href="/" class="brand-logo">
         <slot></slot>
@@ -63,10 +63,6 @@ export default {
 }
 .brand-logo {
   font-family: 'ringbearer';
-}
-
-nav {
-  background-color: #900020;
 }
 
 </style>

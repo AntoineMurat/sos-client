@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="bordeaux">
     <div class="container">
       <div class="row no-margin-bottom">
       <div class="col l4 s12 valign-wrapper">
@@ -149,7 +149,6 @@ footer {
   overflow: hidden;
   text-align: center;
   padding: 0;
-  background-color: #660117;
 }
 
 .no-margin-bottom {

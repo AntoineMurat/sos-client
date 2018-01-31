@@ -11,13 +11,12 @@
 }
 
 p.time-title {
-	margin-bottom: 5px;
-	margin-top: 5px;
+	margin-bottom: 10px;
+	margin-top: 6px;
 }
-/* div.card {
-	opacity: 0;
-	/* TODO: Améliorer pour pas fuck up les SOS */
-} */
+.bordeaux {
+	background-color: #6D071A;
+}
 /*--------------\
 | Countdown CSS |
 \---------------*/
@@ -26,7 +25,7 @@ p.time-title {
   display: block;
   overflow: hidden;
   text-align: center;
-  padding: 0
+  padding: 0;
 }
 
 #countdown li {

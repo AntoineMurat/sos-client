@@ -112,19 +112,42 @@ import $ from 'jquery'
 export default {
   name: 'Team',
   mounted () {
-    var options = []
-    var count = -1
-    $('.card').each(function () {
-      count += 1
-      $(this).attr('id', 'divcard' + count)
-      options[count] = { selector: '#' + 'divcard' + count,
-        offset: 50,
-        callback: function (el) {
-          $(el).removeClass('scale-out')
+    // var options = []
+    // var count = -1
+    // $('.card').each(function () {
+    //   count += 1
+    //   $(this).attr('id', 'divcard' + count)
+    //   options[count] = { selector: '#' + 'divcard' + count,
+    //     offset: 50,
+    //     callback: function (el) {
+    //       $(el).removeClass('scale-out')
+    //     }
+    //   }
+    // })
+    function scrollItBabe () {
+      window.alert('hi')
+      ;(function ($) {
+        $.expr[':'].onScreen = function (elem) {
+          var $window = $(window)
+          var viewportTop = $window.scrollTop()
+          var viewportHeight = $window.height()
+          var viewportBottom = viewportTop + viewportHeight
+          var $elem = $(elem)
+          var top = $elem.offset().top
+          var height = $elem.height()
+          var bottom = top + height
+
+          return (top >= viewportTop && top < viewportBottom) ||
+                 (bottom > viewportTop && bottom <= viewportBottom) ||
+                 (height > viewportHeight && top <= viewportTop && bottom >= viewportBottom)
         }
-      }
-    })
-    window.Materialize.scrollFire(options)
+      })($)
+      $('div.card:visible:onScreen').removeClass('scale-out')
+    }
+    setInterval(
+      scrollItBabe(), 20
+    )
+    // $.scroll(scrollItBabe())
   }
 }
 </script>
