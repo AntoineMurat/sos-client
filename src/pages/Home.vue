@@ -53,7 +53,7 @@ export default {
 }
 
 #oliphant {
-  max-height: 50vh;
+  max-height: 90%;
   max-width: 100%;
 	position:absolute;
 	top: 50%;
@@ -66,7 +66,7 @@ export default {
 }
 
 #anneau {
-  max-height: 65vh;
+  max-height: 95%;
   max-width: 100%;
   position: absolute;
   top: 45%;

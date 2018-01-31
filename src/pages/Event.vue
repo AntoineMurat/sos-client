@@ -3,7 +3,7 @@
   <div class="slider">
     <ul class="slides">
       <li>
-        <img src="static/img/affiche-A4-0.jpg"> <!-- random image -->
+        <img :src="require('@/assets/img/affiche-A4-0.jpg')"> <!-- random image -->
        <div class="caption center-align">
          <h3>This is our big Tagline!</h3>
          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>

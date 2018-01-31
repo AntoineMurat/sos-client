@@ -2,10 +2,10 @@
   <footer>
     <div class="container">
       <div class="row no-margin-bottom">
-      <div class="col l4 s12 valign-wrapper">
+      <div class="col l12 s12 valign-wrapper">
         <h4>{{ this.currentEvent.textBefore }}</h4>
       </div>
-      <div class="col l8 s12">
+      <div class="col l12 s12">
         <ul class="no-margin-bottom">
           <li>
             <span class="days time-font">{{ days }}</span>
@@ -107,15 +107,15 @@ export default {
   }
 
   li span {
-    font-size: 24px;
-    height: 60px;
-    line-height: 60px;
-    width: 60px;
+    font-size: 24px !important;
+    height: 60px !important;
+    line-height: 60px !important;
+    width: 60px !important;
   }
 
   li:before,
   li:after {
-    top:25px;
+    top:25px !important;
   }
 }
 
@@ -123,21 +123,21 @@ export default {
 @media (max-width: 479px) {
 
   li {
-    font-size: 14px;
-    margin-right: 15px;
-    width: 45px;
+    font-size: 14px !important;
+    margin-right: 15px !important;
+    width: 45px !important;
   }
 
   li span {
-    font-size: 20px;
-    height: 45px;
-    line-height: 45px;
-    width: 45px;
+    font-size: 20px !important;
+    height: 45px !important;
+    line-height: 45px !important;
+    width: 45px !important;
   }
 
   li:before,
   li:after {
-    top: 18px
+    top: 18px !important;
   }
 }
 /*--------------\
@@ -163,6 +163,10 @@ footer {
 
 h4, .li,p {
   color: white;
+}
+
+h4 {
+  font-size: 1.8rem;
 }
 
 li {
