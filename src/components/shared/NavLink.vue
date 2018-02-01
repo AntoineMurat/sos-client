@@ -1,5 +1,5 @@
 <template>
-  <li><router-link :to="link">{{ title }}</router-link></li>
+  <li :class="{active: $route.path == link}"><router-link :to="link">{{ title }}</router-link></li>
 </template>
 
 <script>

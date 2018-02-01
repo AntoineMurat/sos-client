@@ -6,7 +6,7 @@ import Home from '@/pages/Home'
 import NotFound from '@/pages/NotFound'
 import Sos from '@/pages/Sos'
 import Team from '@/pages/Team'
-import Event from '@/pages/Event'
+import Events from '@/pages/Events'
 
 Vue.use(Router)
 
@@ -23,9 +23,9 @@ export default new Router({
       component: Team
     },
     {
-      path: '/event',
-      name: 'event',
-      component: Event
+      path: '/events',
+      name: 'events',
+      component: Events
     },
     {
       path: '/admin',

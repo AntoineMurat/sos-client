@@ -47,7 +47,7 @@ export default {
   props: ['typeSos'],
   computed: {
     sosImage () {
-      return require('@/assets/img/' + this.typeSos.type + '.jpg')
+      return require('@/assets/img/sos/' + this.typeSos.type + '.jpg')
     }
   },
   data () {

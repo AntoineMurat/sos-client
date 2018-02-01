@@ -28,12 +28,12 @@ export default {
     }
 }
 
-@keyframes fadeInOut {
+@keyframes fadeIn {
   0% {
     opacity: 0;
   }
 
-  50% {
+  25% {
     opacity: 0;
   }
 
@@ -59,7 +59,7 @@ export default {
 	top: 50%;
 	transform: translateY(-50%) translateX(-50%);
 	left:50%;
-  animation-name: fadeInOut;
+  animation-name: fadeIn;
   animation-duration: 5s;
   /* animation-iteration-count: infinite;
   animation-direction: alternate; */
@@ -70,12 +70,12 @@ export default {
   max-width: 100%;
   position: absolute;
   top: 45%;
-	transform: translateY(-50%) translateX(-50%);
+	transform: scale(10) translateY(-50%) translateX(-50%);
 	left:50%;
   animation: spin 100s linear infinite;
 }
 
 #anneauWrapper {
-  animation: fadeInOut 5s linear;
+  animation: fadeIn 8s linear;
 }
 </style>

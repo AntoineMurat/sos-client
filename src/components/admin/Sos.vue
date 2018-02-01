@@ -77,7 +77,7 @@ export default {
   },
   computed: {
     imageFile () {
-      return require('@/assets/img/' + this.type + '.jpg')
+      return require('@/assets/img/sos/' + this.type + '.jpg')
     },
     title () {
       return 'SOS ' + this.type

@@ -2,7 +2,7 @@
   <div class="col l4 m6 s12">
     <div :class="(hidden ? 'scale-out ' : '') + 'card scale-transition hoverable'">
       <div class="card-image">
-        <img :src="photo" :data-caption="description" class="materialboxed clickable">
+        <img :src="photo" class="clickable">
         <span class="card-title">{{ blaz }}</span>
       </div>
       <div class="card-content center-align">
@@ -24,13 +24,10 @@ export default {
   mounted () {
     setTimeout(_ => {
       this.hidden = false
-    }, 250 * this.index)
+    }, 150 * this.index)
   }
 }
 </script>
 
 <style scoped>
-.clickable {
-  cursor: pointer !important;
-}
 </style>

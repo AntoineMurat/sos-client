@@ -38,7 +38,7 @@ export default {
         },
         {
           title: 'Événements',
-          link: '/event'
+          link: '/events'
         },
         {
           title: 'Team',
